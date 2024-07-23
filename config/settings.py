@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-qpkjcmo0-c)mx(^xdgud7ef53lthlxw91-l=)&3-v7l2ev836c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["jewellery-store.chbk.run"]
 
 
 # Application definition
