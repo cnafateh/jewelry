@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-qpkjcmo0-c)mx(^xdgud7ef53lthlxw91-l=)&3-v7l2ev836c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["jewellery-store.chbk.run"]
+ALLOWED_HOSTS = ["jewellery-store.chbk.run", "localhost"]
 #New
 CSRF_TRUSTED_ORIGINS = ["https://jewellery-store.chbk.run"]
 
@@ -169,7 +169,7 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.AllowAny",
     ],
     "DEFAULT_AUTHENTICATION_CLASSES" : [
-        "rest_framework.authentication.SessionAuthentication",
+        # "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
     ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
