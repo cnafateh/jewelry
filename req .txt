@@ -1,0 +1,10 @@
+dj-rest-auth
+Django
+django-allauth
+django-rest-framework
+djangorestframework
+django-cors-headers
+djoser
+pillow
+stripe
+drf-spectacular
