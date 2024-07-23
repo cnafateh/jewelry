@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-qpkjcmo0-c)mx(^xdgud7ef53lthlxw91-l=)&3-v7l2ev836c
 DEBUG = True
 
 ALLOWED_HOSTS = ["jewellery-store.chbk.run"]
-
+#New
+CSRF_TRUSTED_ORIGINS = ["https://jewellery-store.chbk.run"]
 
 # Application definition
 
@@ -138,6 +139,9 @@ STATIC_URL = 'static/'
 #New
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
