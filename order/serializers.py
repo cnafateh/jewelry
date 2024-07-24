@@ -7,3 +7,9 @@ class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         fields = ("product",)
         model = Order
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = "__all__"
+        model = Order

@@ -1,8 +1,8 @@
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, mixins
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from .serializers import OrderSerializer
+from .serializers import OrderSerializer, UserSerializer
 from .models import Order
 
 
@@ -18,5 +18,12 @@ class OrderApi(APIView):
             return Response(serializer.data, status=200)
         else:
             return Response({"errors": serializer.errors}, status=400)
-        
-    
+           
+class UserOrderApi(APIView):
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def get(self, request):
+        user = request.user
+        orders = Order.objects.filter(user=user)
+        serializer = OrderSerializer(orders, many=True)
+        return Response(serializer.data)
