@@ -10,3 +10,12 @@ class CategoryList(generics.ListAPIView):
 class ProductList(generics.ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+
+class ProductDetail(generics.ListAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+
+    def get_queryset(self):
+        category_slug = self.kwargs['category_slug']
+        return Product.objects.filter(category__slug=category_slug)
