@@ -27,9 +27,13 @@ class Product(models.Model):
     cutie = models.DecimalField(max_digits=3, decimal_places=0)
     color = models.CharField(max_length=100)
     stock = models.BooleanField(default=True)
+    # stock = models.PositiveIntegerField()
+    # available = models.BooleanField(default=True)
     image = models.ImageField(upload_to='uploads/', blank=True, null=True)
     thumbnail = models.ImageField(upload_to='uploads/', blank=True, null=True)
     date_added = models.DateTimeField(auto_now_add=True)
+    # created = models.DateTimeField(auto_now_add=True)
+    # updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ('-date_added',)

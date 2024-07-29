@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'accounts',
     'product',
     'order',
+    'customer',
     #3rdParty
     'rest_framework',
     'drf_spectacular',
