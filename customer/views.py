@@ -4,34 +4,6 @@ from .models import Customer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
-
-# class CustomerListCreateView(APIView):
-#     queryset = Customer.objects.all()
-#     serializer_class = CustomerSerializer
-#     permission_classes = [permissions.IsAuthenticated]
-
-#     def post(self, request):
-#         serializer = CustomerSerializer(data=request.data)
-#         if serializer.is_valid(raise_exception=True):
-#             serializer.save(user=request.user)
-#             return Response(serializer.data, status=200)
-#         else:
-#             return Response({"errors": serializer.errors}, status=400)
-# **************************************************************************************
-# class CustomerListCreateView(generics.ListCreateAPIView):
-#     queryset = Customer.objects.all()
-#     serializer_class = CustomerSerializer
-#     permission_classes = [permissions.IsAuthenticated]
-
-#     def perform_create(self, serializer):
-#         serializer.save(user=self.request.user)
-
-
-# class CustomerRetrieveUpdateView(generics.RetrieveUpdateAPIView):
-#     queryset = Customer.objects.all()
-#     serializer_class = CustomerSerializer
-#     permission_classes = [permissions.IsAuthenticated]
-# **************************************************************************************
 class CustomerView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
